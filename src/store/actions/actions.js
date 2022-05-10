@@ -3,9 +3,9 @@ import ShoeStore from './../../config/ShoeStore';
 
 export const getAllShoes = () => async (dispatch) => {
   try {
-    const response = await ShoeStore.get();
+    const response = await ShoeStore.get("sneakers?limit=10");
 
-    console.log(response.data.data)
+    console.log(response.data)
     // dispatch({
     //   type: types.GET_ALL_SHOES,
     //   payload: {
