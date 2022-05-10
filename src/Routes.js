@@ -6,9 +6,9 @@ import ProductDetailScreen from "./screens/ProductDetailScreen";
 const CustomRoutes = () => {
   return (
     <>
-      <Routes>
+      <Routes >
         <Route path="/" element={<HomeScreen />} />
-        <Route path="about" element={<ProductDetailScreen />} />
+        {/* <Route path="about" element={<ProductDetailScreen />} /> */}
       </Routes>
     </>
   );

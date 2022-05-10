@@ -13,7 +13,7 @@ const P = (props) => {
   );
 };
 
-const CardComp = () => {
+const CardComp = ({data}) => {
   return (
     <>
       <Box
@@ -44,9 +44,9 @@ const CardComp = () => {
               justifyContent: "center",
             }}
           >
-            Brand name
+            {data.brand}
           </Typography>
-          <img src={cart} style={{ width: "100%", height: "auto" }} />
+          <img src={data.media.thumbUrl} style={{ width: "100%", height: "auto" }} />
           <Divider light />
           <P
             variant="p"
@@ -54,19 +54,19 @@ const CardComp = () => {
             component="p"
             styleX={{ justifyContent: "center", display: "flex" }}
           >
-            title
+            {data.title}
           </P>
           <P variant="p" noWrap component="p">
-            Name : asd
+            Name : {data.name}
           </P>
           <P variant="p" noWrap component="p">
-            Release Date : 4556465
+            Release Date : {data.releaseDate}
           </P>
           <P variant="p" noWrap component="p">
-            Color : red
+            Color : {data.colorway}
           </P>
           <P variant="p" noWrap component="p">
-            Gender : red
+            Gender : {data.gender}
           </P>
         </Paper>
         <div
@@ -82,7 +82,7 @@ const CardComp = () => {
             alignItems:"center",
             display:"flex"
           }}
-        ><h4>{`${22} $`}</h4></div>
+        ><h4>{`${data.retailPrice} $`}</h4></div>
       </Box>
     </>
   );
